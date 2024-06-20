@@ -36,7 +36,7 @@ export default {
     const animeList=ref([]);
 
     const handleSearch= async()=>{
-      animeList.value=await fetch(`https://api.jikan.moe/v4/anime?=q${search_query.value}`)
+      animeList.value=await fetch(`https://api.jikan.moe/v4/anime?q=${search_query.value}`)
       .then(res => res.json())
       .then(data =>data.data);
 
