@@ -11,11 +11,20 @@
         />
       </form>
     </header>
+
+    <main>
+      <div class="cards">
+        <Card/>
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-export default {};
+import Card from './components/Card.vue'
+export default {
+  components: { Card },
+};
 </script>
 
 <style>
@@ -90,5 +99,18 @@ h1:hover {
 
 }
 
+main{
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
 
 </style>
